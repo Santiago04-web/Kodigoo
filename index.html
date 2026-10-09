@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodigoo | Moda y Tecnología — Tendencias para tu día a día en Colombia</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Kodigoo es una marca colombiana nacida en Cali que fusiona diseño moderno, prendas esenciales de alta calidad y la próxima vanguardia en accesorios y tecnología. Envíos a todo el país.">
+  <meta name="keywords" content="Kodigoo, moda Colombia, ropa Cali, streetwear Colombia, hoodies oversize, camisetas premium, tecnología, estilo de vida, kodigoo.lat">
+  <meta name="author" content="Kodigoo">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kodigoo.lat">
+  <meta property="og:title" content="Kodigoo | Moda y Tecnología — Tendencias para tu día a día">
+  <meta property="og:description" content="Moda urbana contemporánea y próxima expansión en tecnología esencial. Descubre nuestra colección oficial con envíos a toda Colombia.">
+  <meta property="og:image" content="https://kodigoo.lat/banner.jpg">
+  <meta property="og:locale" content="es_CO">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <!-- Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            kodigoo: {
+              black: '#07090E',
+              dark: '#0B0F17',
+              surface: '#111827',
+              surfaceLight: '#1E293B',
+              blue: '#0066FF',
+              cyan: '#00D2FF',
+              glow: '#0066FF33',
+              gray: '#94A3B8',
+              silver: '#E2E8F0',
+            }
+          },
+          boxShadow: {
+            'neon': '0 0 25px -5px rgba(0, 102, 255, 0.4)',
+            'neon-lg': '0 0 45px -10px rgba(0, 102, 255, 0.55)',
+            'cyan-glow': '0 0 20px -3px rgba(0, 210, 255, 0.4)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #07090E;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1E293B;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0066FF;
+    }
+
+    .glass-nav {
+      background: rgba(11, 15, 23, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card {
+      background: rgba(17, 24, 39, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-card:hover {
+      border-color: rgba(0, 102, 255, 0.4);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, #00D2FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .blue-glow-bg {
+      background: radial-gradient(circle at 50% 30%, rgba(0, 102, 255, 0.18) 0%, rgba(7, 9, 14, 0) 70%);
+    }
+  </style>
+</head>
+
+<body class="bg-kodigoo-black text-slate-100 font-sans antialiased selection:bg-kodigoo-blue selection:text-white">
+
+  <!-- ================= TOP BAR INFO ================= -->
+  <div class="bg-gradient-to-r from-kodigoo-dark via-kodigoo-surface to-kodigoo-dark border-b border-white/5 py-2 px-4 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-kodigoo-gray text-center sm:text-left">
+      <div class="flex items-center gap-2 justify-center">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Envíos a toda <strong>Colombia</strong> desde Cali, Valle del Cauca</span>
+        <span class="text-white/20 hidden md:inline">|</span>
+        <span class="hidden md:inline">NIT: 900380598-6 • Cámara de Comercio de Cali</span>
+      </div>
+      <div class="flex items-center gap-4 justify-center">
+        <a href="mailto:soporte@kodigoo.lat" class="hover:text-white transition flex items-center gap-1">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i> soporte@kodigoo.lat
+        </a>
+        <a href="https://wa.me/573042325503" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition flex items-center gap-1 font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i> +57 304 232 5503
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="sticky top-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo Brand -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="relative w-11 h-11 rounded-xl overflow-hidden p-0.5 bg-gradient-to-br from-white/20 to-kodigoo-blue/50 group-hover:shadow-neon transition-all duration-300">
+            <img src="logo.png" alt="Kodigoo Logo" class="w-full h-full object-cover rounded-[10px]">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-2xl tracking-wider text-white group-hover:text-kodigoo-cyan transition">
+              KODIGOO<span class="text-kodigoo-cyan">.</span>
+            </span>
+            <span class="text-[10px] tracking-widest uppercase font-medium text-kodigoo-gray -mt-1">
+              Moda & Tech
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a href="#inicio" class="text-white hover:text-kodigoo-cyan transition">Inicio</a>
+          <a href="#moda" class="text-slate-300 hover:text-white transition">Colección Moda</a>
+          <a href="#tech" class="text-slate-300 hover:text-kodigoo-cyan transition flex items-center gap-1">
+            Tech & Gear <span class="text-[10px] bg-kodigoo-blue/30 text-kodigoo-cyan px-2 py-0.5 rounded-full border border-kodigoo-blue/40">Próximamente</span>
+          </a>
+          <a href="#nosotros" class="text-slate-300 hover:text-white transition">Sobre Kodigoo</a>
+          <a href="#garantia" class="text-slate-300 hover:text-white transition">Garantía & Confianza</a>
+          <a href="#contacto" class="text-slate-300 hover:text-white transition">Contacto</a>
+        </div>
+
+        <!-- Right Action Button -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://wa.me/573042325503?text=Hola%20Kodigoo!%20Quiero%20conocer%20el%20cat%C3%A1logo%20y%20precios%20disponibles" target="_blank" rel="noopener noreferrer" class="relative group overflow-hidden rounded-xl p-px font-semibold text-sm">
+            <span class="absolute inset-0 bg-gradient-to-r from-kodigoo-blue to-kodigoo-cyan rounded-xl group-hover:opacity-90 transition"></span>
+            <span class="relative block px-5 py-2.5 rounded-[11px] bg-kodigoo-dark text-white group-hover:bg-opacity-80 transition flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+              <span>Atención WhatsApp</span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-kodigoo-dark border-b border-white/10 px-6 py-6 space-y-4">
+      <a href="#inicio" class="block text-white hover:text-kodigoo-cyan text-base font-medium mobile-link">Inicio</a>
+      <a href="#moda" class="block text-slate-300 hover:text-white text-base font-medium mobile-link">Colección Moda</a>
+      <a href="#tech" class="block text-slate-300 hover:text-kodigoo-cyan text-base font-medium mobile-link">Tech & Gear (Próximamente)</a>
+      <a href="#nosotros" class="block text-slate-300 hover:text-white text-base font-medium mobile-link">Sobre Kodigoo</a>
+      <a href="#garantia" class="block text-slate-300 hover:text-white text-base font-medium mobile-link">Garantía & Legal</a>
+      <a href="#contacto" class="block text-slate-300 hover:text-white text-base font-medium mobile-link">Contacto</a>
+      <div class="pt-4 border-t border-white/10">
+        <a href="https://wa.me/573042325503?text=Hola%20Kodigoo!%20Quiero%20solicitar%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-kodigoo-blue to-kodigoo-cyan text-white font-semibold">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Chatear por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="inicio" class="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden blue-glow-bg">
+    
+    <!-- Background Decor Elements -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-kodigoo-blue/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-kodigoo-surface border border-white/10 text-xs font-semibold text-kodigoo-silver mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-kodigoo-cyan"></span>
+          <span>ESTÉTICA URBANA & FUTURA INNOVACIÓN</span>
+          <span class="text-white/20">•</span>
+          <span class="text-kodigoo-cyan">CALI, COLOMBIA</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-white leading-[1.1] mb-6">
+          Moda y Tecnología en un <span class="gradient-text">mismo código.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto mb-8">
+          En Kodigoo diseñamos prendas modernas y versátiles para tu día a día, integrando calidad premium, estilo contemporáneo y una visión preparada para conectar con los mejores accesorios y tecnología.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#moda" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-kodigoo-blue to-kodigoo-cyan text-white font-bold text-base hover:shadow-neon transition-all duration-300 flex items-center justify-center gap-2">
+            <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+            <span>Explorar Colección Moda</span>
+          </a>
+          <a href="https://wa.me/573042325503?text=Hola%20Kodigoo!%20Quiero%20atenci%C3%B3n%20personalizada" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-kodigoo-surface hover:bg-kodigoo-surfaceLight border border-white/10 text-white font-semibold text-base transition flex items-center justify-center gap-2">
+            <i data-lucide="message-square" class="w-5 h-5 text-emerald-400"></i>
+            <span>Asesoría Directa (+57 304 232 5503)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual Banner Showcase -->
+      <div class="mt-8 relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl group max-w-5xl mx-auto">
+        <div class="aspect-w-16 aspect-h-9 md:h-[500px] w-full overflow-hidden bg-black">
+          <img src="banner.jpg" alt="Kodigoo Banner Oficial - Moda y Tecnología" class="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-kodigoo-black via-transparent to-transparent opacity-80 pointer-events-none"></div>
+        <div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 pointer-events-none">
+          <div class="bg-black/60 backdrop-blur-md px-5 py-3 rounded-xl border border-white/10">
+            <span class="text-xs uppercase tracking-widest font-semibold text-kodigoo-cyan block">Identidad Oficial</span>
+            <span class="text-sm font-bold text-white">Kodigoo: Tendencias para tu día a día</span>
+          </div>
+          <div class="bg-black/60 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10 text-xs text-slate-300 flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+            <span>Marca Registrada • NIT 900380598-6</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= VALUE PROPOSITIONS ================= -->
+  <section class="py-16 border-y border-white/5 bg-kodigoo-dark/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-kodigoo-blue/10 border border-kodigoo-blue/20 text-kodigoo-cyan">
+            <i data-lucide="truck" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-base mb-1">Envíos a toda Colombia</h4>
+            <p class="text-xs text-kodigoo-gray leading-relaxed">Despachos asegurados desde Cali a cualquier municipio del país con guía de rastreo.</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-kodigoo-blue/10 border border-kodigoo-blue/20 text-kodigoo-cyan">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-base mb-1">Calidad & Confección</h4>
+            <p class="text-xs text-kodigoo-gray leading-relaxed">Telas seleccionadas, costuras reforzadas y horma moderna que resiste el uso continuo.</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-kodigoo-blue/10 border border-kodigoo-blue/20 text-emerald-400">
+            <i data-lucide="shield" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-base mb-1">Transparencia Legal</h4>
+            <p class="text-xs text-kodigoo-gray leading-relaxed">Empresa constituida en Cámara de Comercio con pagos protegidos y factura oficial.</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl flex items-start gap-4">
+          <div class="p-3 rounded-xl bg-kodigoo-blue/10 border border-kodigoo-blue/20 text-kodigoo-cyan">
+            <i data-lucide="headphones" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-base mb-1">Atención Humana 1 a 1</h4>
+            <p class="text-xs text-kodigoo-gray leading-relaxed">Soporte directo antes, durante y después de recibir tu compra vía WhatsApp o correo.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FASHION COLLECTION (CURRENT CORE) ================= -->
+  <section id="moda" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-kodigoo-blue/10 border border-kodigoo-blue/20 text-xs font-semibold text-kodigoo-cyan mb-3">
+            <i data-lucide="tag" class="w-3.5 h-3.5"></i> COLECCIÓN ACTIVA
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white">
+            Prendas Esenciales Kodigoo
+          </h2>
+          <p class="text-sm sm:text-base text-slate-400 mt-2 max-w-xl">
+            Prendas urbanas diseñadas para adaptarse a tu estilo de vida. Comodidad, estética minimalista y máxima versatilidad.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/573042325503?text=Hola,%20quisiera%20ver%20el%20cat%C3%A1logo%20completo%20de%20prendas%20Kodigoo" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-kodigoo-surface hover:bg-kodigoo-surfaceLight border border-white/10 text-xs sm:text-sm font-semibold text-white transition flex items-center gap-2">
+            <i data-lucide="external-link" class="w-4 h-4"></i> Pedir Catálogo en PDF
+          </a>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Product 1 -->
+        <div class="glass-card rounded-2xl overflow-hidden group transition duration-300 flex flex-col">
+          <div class="relative aspect-w-1 aspect-h-1 bg-black/60 p-8 flex items-center justify-center overflow-hidden border-b border-white/5">
+            <div class="w-48 h-48 rounded-2xl bg-gradient-to-tr from-kodigoo-surface to-kodigoo-dark border border-white/10 flex flex-col items-center justify-center p-6 text-center shadow-lg group-hover:scale-105 transition-transform duration-500">
+              <span class="text-4xl font-display font-black text-white mb-2">K</span>
+              <span class="text-xs font-medium text-kodigoo-cyan uppercase tracking-wider">Heavyweight Hoodie</span>
+              <span class="text-[10px] text-slate-400 mt-1">Algodón Premium 400g</span>
+            </div>
+            <span class="absolute top-4 left-4 bg-kodigoo-blue text-white text-[11px] font-bold px-2.5 py-1 rounded-md">
+              Top Ventas
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-kodigoo-cyan font-semibold uppercase tracking-wider mb-1">Hoodies & Buzos</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-kodigoo-cyan transition">Hoodie Oversize Obsidian 'K'</h3>
+              <p class="text-xs text-slate-400 mt-2 leading-relaxed">Corte relajado, bolsillo tipo canguro ergonómico y monograma 'K' bordado en alta densidad.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-500 block">Precio oficial</span>
+                <span class="text-xl font-display font-extrabold text-white">$139.900 <span class="text-xs font-normal text-slate-400">COP</span></span>
+              </div>
+              <a href="https://wa.me/573042325503?text=Hola,%20me%20interesa%20el%20Hoodie%20Oversize%20Obsidian%20'K'" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-kodigoo-blue hover:bg-blue-600 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Comprar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="glass-card rounded-2xl overflow-hidden group transition duration-300 flex flex-col">
+          <div class="relative aspect-w-1 aspect-h-1 bg-black/60 p-8 flex items-center justify-center overflow-hidden border-b border-white/5">
+            <div class="w-48 h-48 rounded-2xl bg-gradient-to-tr from-kodigoo-surface to-kodigoo-dark border border-white/10 flex flex-col items-center justify-center p-6 text-center shadow-lg group-hover:scale-105 transition-transform duration-500">
+              <span class="text-4xl font-display font-black text-white mb-2">K</span>
+              <span class="text-xs font-medium text-white uppercase tracking-wider">Essential Tee Pure White</span>
+              <span class="text-[10px] text-slate-400 mt-1">100% Algodón Peinado</span>
+            </div>
+            <span class="absolute top-4 left-4 bg-emerald-500 text-white text-[11px] font-bold px-2.5 py-1 rounded-md">
+              Disponible
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-kodigoo-cyan font-semibold uppercase tracking-wider mb-1">Camisetas & Tops</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-kodigoo-cyan transition">Camiseta Heavy Weight Blanco Nieve</h3>
+              <p class="text-xs text-slate-400 mt-2 leading-relaxed">Cuello acanalado grueso que no se deforma, caída limpia y tacto ultra suave de máxima frescura.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-500 block">Precio oficial</span>
+                <span class="text-xl font-display font-extrabold text-white">$79.900 <span class="text-xs font-normal text-slate-400">COP</span></span>
+              </div>
+              <a href="https://wa.me/573042325503?text=Hola,%20me%20interesa%20la%20Camiseta%20Heavy%20Weight%20Blanco%20Nieve" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-kodigoo-blue hover:bg-blue-600 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Comprar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="glass-card rounded-2xl overflow-hidden group transition duration-300 flex flex-col">
+          <div class="relative aspect-w-1 aspect-h-1 bg-black/60 p-8 flex items-center justify-center overflow-hidden border-b border-white/5">
+            <div class="w-48 h-48 rounded-2xl bg-gradient-to-tr from-kodigoo-surface to-kodigoo-dark border border-white/10 flex flex-col items-center justify-center p-6 text-center shadow-lg group-hover:scale-105 transition-transform duration-500">
+              <span class="text-4xl font-display font-black text-kodigoo-cyan mb-2">K</span>
+              <span class="text-xs font-medium text-slate-200 uppercase tracking-wider">Black Essential Tee</span>
+              <span class="text-[10px] text-slate-400 mt-1">Corte Boxy Fit Moderno</span>
+            </div>
+            <span class="absolute top-4 left-4 bg-emerald-500 text-white text-[11px] font-bold px-2.5 py-1 rounded-md">
+              Disponible
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-xs text-kodigoo-cyan font-semibold uppercase tracking-wider mb-1">Camisetas & Tops</div>
+              <h3 class="text-lg font-bold text-white group-hover:text-kodigoo-cyan transition">Camiseta Boxy Fit Deep Black 'K'</h3>
+              <p class="text-xs text-slate-400 mt-2 leading-relaxed">El básico definitivo. Silueta moderna, hombros caídos y el monograma minimalista en el pecho.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+              <div>
+                <span class="text-xs text-slate-500 block">Precio oficial</span>
+                <span class="text-xl font-display font-extrabold text-white">$79.900 <span class="text-xs font-normal text-slate-400">COP</span></span>
+              </div>
+              <a href="https://wa.me/573042325503?text=Hola,%20me%20interesa%20la%20Camiseta%20Boxy%20Fit%20Deep%20Black%20'K'" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-kodigoo-blue hover:bg-blue-600 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i> Comprar
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TECH EXPANSION (FUTURE HORIZON) ================= -->
+  <section id="tech" class="py-24 bg-gradient-to-b from-kodigoo-black via-kodigoo-dark to-kodigoo-black border-t border-white/5 relative overflow-hidden">
+    
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-kodigoo-cyan/10 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="max-w-3xl mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-kodigoo-cyan/10 border border-kodigoo-cyan/30 text-xs font-semibold text-kodigoo-cyan mb-4">
+          <i data-lucide="cpu" class="w-3.5 h-3.5"></i> PRÓXIMA FRONTERA KODIGOO
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white">
+          Tecnología & Gadgets para tu estilo de vida
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 mt-4 leading-relaxed">
+          Nuestra visión va más allá de la ropa. Kodigoo incorporará una selecta línea de accesorios tecnológicos: audio inalámbrico de alta fidelidad, wearables y periféricos esenciales con diseño estético impecable.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Tech Teaser 1 -->
+        <div class="glass-card p-8 rounded-2xl border-dashed border-white/20 relative group hover:border-kodigoo-cyan/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-kodigoo-cyan/10 border border-kodigoo-cyan/20 flex items-center justify-center text-kodigoo-cyan mb-6">
+            <i data-lucide="headphones" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-kodigoo-cyan bg-kodigoo-cyan/10 px-2.5 py-1 rounded-md">En desarrollo</span>
+          <h3 class="text-xl font-bold text-white mt-3">Audio Wireless Hi-Fi</h3>
+          <p class="text-xs text-slate-400 mt-2 leading-relaxed">Audífonos circumaurales con cancelación activa de ruido, acústica calibrada y acabados metálicos negro mate.</p>
+        </div>
+
+        <!-- Tech Teaser 2 -->
+        <div class="glass-card p-8 rounded-2xl border-dashed border-white/20 relative group hover:border-kodigoo-cyan/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-kodigoo-blue/10 border border-kodigoo-blue/20 flex items-center justify-center text-kodigoo-blue mb-6">
+            <i data-lucide="watch" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-kodigoo-cyan bg-kodigoo-cyan/10 px-2.5 py-1 rounded-md">En desarrollo</span>
+          <h3 class="text-xl font-bold text-white mt-3">Smart Wearables & Straps</h3>
+          <p class="text-xs text-slate-400 mt-2 leading-relaxed">Correas y accesorios de pulsera ergonómicos y minimalistas compatibles con los principales smartwatches del mercado.</p>
+        </div>
+
+        <!-- Tech Teaser 3 -->
+        <div class="glass-card p-8 rounded-2xl border-dashed border-white/20 relative group hover:border-kodigoo-cyan/50 transition">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-kodigoo-cyan bg-kodigoo-cyan/10 px-2.5 py-1 rounded-md">En desarrollo</span>
+          <h3 class="text-xl font-bold text-white mt-3">Carga Rápida & Mag-Safe</h3>
+          <p class="text-xs text-slate-400 mt-2 leading-relaxed">Bases magnéticas de carga inalámbrica y cables reforzados de alta durabilidad con aleaciones premium.</p>
+        </div>
+
+      </div>
+
+      <!-- Waitlist Banner -->
+      <div class="mt-12 glass-card p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-kodigoo-surface via-kodigoo-dark to-kodigoo-surface border border-kodigoo-blue/30 shadow-neon">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-kodigoo-blue/20 flex items-center justify-center text-kodigoo-cyan flex-shrink-0">
+            <i data-lucide="bell-ring" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-white">Sé el primero en conocer los próximos drops</h4>
+            <p class="text-xs text-slate-400">Escríbenos a WhatsApp para unirte a la lista prioritaria de lanzamientos.</p>
+          </div>
+        </div>
+        <a href="https://wa.me/573042325503?text=Hola%20Kodigoo!%20Quiero%20unirme%20a%20la%20lista%20de%20espera%20de%20nuevos%20lanzamientos" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-kodigoo-cyan text-kodigoo-black font-extrabold text-xs uppercase tracking-wider hover:bg-white transition whitespace-nowrap">
+          Unirme a la lista prioritaria
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ABOUT & ORIGIN ================= -->
+  <section id="nosotros" class="py-24 relative border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-kodigoo-surface border border-white/10 text-xs font-semibold text-kodigoo-cyan mb-4">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> CALI, VALLE DEL CAUCA
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white leading-tight">
+            Nacidos en Cali, creados para todo el país.
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300 mt-6 leading-relaxed">
+            Kodigoo surgió con el propósito de ofrecer una alternativa moderna en el comercio colombiano: prendas bien confeccionadas, siluetas contemporáneas y una plataforma comercial honesta, cercana y confiable.
+          </p>
+          <p class="text-sm text-slate-400 mt-4 leading-relaxed">
+            No pretendemos ser una tienda genérica más. Creemos en los detalles meticulosos, en el empaque que da orgullo abrir y en un canal de atención donde detrás de cada mensaje hay una persona dispuesta a asesorarte con agilidad y respeto.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-8 pt-8 border-t border-white/10">
+            <div>
+              <span class="text-2xl font-display font-black text-kodigoo-cyan block">100%</span>
+              <span class="text-xs text-slate-400">Comercio Colombiano</span>
+            </div>
+            <div>
+              <span class="text-2xl font-display font-black text-white block">Cali</span>
+              <span class="text-xs text-slate-400">Sede Principal</span>
+            </div>
+            <div>
+              <span class="text-2xl font-display font-black text-emerald-400 block">Nacional</span>
+              <span class="text-xs text-slate-400">Cobertura de Envíos</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-8 rounded-3xl border border-white/10 relative">
+          <div class="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
+            <img src="logo.png" alt="Kodigoo Isotipo" class="w-16 h-16 rounded-2xl object-cover shadow-neon">
+            <div>
+              <h3 class="text-xl font-bold text-white">Kodigoo Oficial</h3>
+              <p class="text-xs text-slate-400">Moda & Tendencias Contemporáneas</p>
+            </div>
+          </div>
+
+          <div class="space-y-4 text-xs text-slate-300">
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Envíos con guía:</strong> Despacho asegurado a través de empresas transportadoras de primer nivel.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Cambios garantizados:</strong> Si la talla no te ajusta como querías, te brindamos soporte para gestionar el cambio.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Compras protegidas:</strong> Pagos electrónicos mediante canales certificados con cifrado SSL.</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+              <span><strong>Atención post-venta:</strong> Acompañamiento continuo vía WhatsApp y soporte al cliente por correo oficial.</span>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
+            <span class="text-xs text-slate-500">¿Dudas sobre tallas?</span>
+            <a href="https://wa.me/573042325503?text=Hola,%20quisiera%20asesor%C3%ADa%20sobre%20las%20tallas%20de%20las%20prendas" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-kodigoo-cyan hover:underline flex items-center gap-1">
+              Hablar con un asesor <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TRUST & LEGAL COMPLIANCE ================= -->
+  <section id="garantia" class="py-20 bg-kodigoo-dark/70 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-semibold text-emerald-400 mb-3">
+          <i data-lucide="file-check" class="w-3.5 h-3.5"></i> RESPALDO LEGAL & COMERCIAL
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-display font-extrabold text-white">
+          Transparencia y Seguridad en cada Compra
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">
+          Operamos con total apego a la normatividad comercial colombiana para brindarte la certeza de una compra confiable.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Legal Card 1 -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-emerald-400">
+              <i data-lucide="building-2" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Registro Mercantil Oficial</h4>
+              <span class="text-[11px] text-slate-400">Cámara de Comercio de Cali</span>
+            </div>
+          </div>
+          <div class="text-xs text-slate-300 space-y-1.5 border-t border-white/5 pt-3">
+            <p><strong>Razón Social:</strong> Kodigoo</p>
+            <p><strong>NIT:</strong> 900380598-6</p>
+            <p><strong>Matrícula Mercantil:</strong> 780809-71</p>
+            <p><strong>Domicilio:</strong> CL 16 NORTE # 98 - 593 CS 99, Cali</p>
+          </div>
+        </div>
+
+        <!-- Legal Card 2 -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-kodigoo-cyan">
+              <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Derecho de Retracto y Cambios</h4>
+              <span class="text-[11px] text-slate-400">Estatuto del Consumidor</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+            Cumplimiento cabal de la Ley 1480 de 2011. Si necesitas cambio de talla o ejercer tu derecho de retracto, nuestro equipo te guía en los plazos estipulados de forma transparente.
+          </p>
+        </div>
+
+        <!-- Legal Card 3 -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-kodigoo-blue">
+              <i data-lucide="lock" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Protección de Datos (Habeas Data)</h4>
+              <span class="text-[11px] text-slate-400">Ley 1581 de 2012</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed border-t border-white/5 pt-3">
+            Tus datos personales y de facturación son tratados bajo estrictas medidas de confidencialidad y únicamente para la gestión logística de tus pedidos.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contacto" class="py-24 border-t border-white/5 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-kodigoo-surface border border-white/10 text-xs font-semibold text-kodigoo-cyan mb-4">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i> CANALES OFICIALES
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-display font-extrabold text-white">
+            Estamos para atenderte.
+          </h2>
+          <p class="text-sm text-slate-400 mt-4 leading-relaxed max-w-lg">
+            ¿Tienes alguna consulta sobre una prenda, estado de un pedido o necesitas atención personalizada? Escríbenos directamente por cualquiera de nuestros medios.
+          </p>
+
+          <div class="mt-8 space-y-6">
+            
+            <a href="https://wa.me/573042325503" target="_blank" rel="noopener noreferrer" class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-emerald-500/40 transition group">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition">
+                <i data-lucide="phone-call" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block">Línea WhatsApp Comercial</span>
+                <span class="text-base font-bold text-white group-hover:text-emerald-400 transition">+57 304 232 5503</span>
+              </div>
+            </a>
+
+            <a href="mailto:soporte@kodigoo.lat" class="glass-card p-4 rounded-xl flex items-center gap-4 hover:border-kodigoo-cyan/40 transition group">
+              <div class="w-12 h-12 rounded-xl bg-kodigoo-cyan/10 border border-kodigoo-cyan/20 flex items-center justify-center text-kodigoo-cyan group-hover:scale-105 transition">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block">Correo Electrónico de Soporte</span>
+                <span class="text-base font-bold text-white group-hover:text-kodigoo-cyan transition">soporte@kodigoo.lat</span>
+              </div>
+            </a>
+
+            <div class="glass-card p-4 rounded-xl flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-kodigoo-blue/10 border border-kodigoo-blue/20 flex items-center justify-center text-kodigoo-blue">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block">Ubicación y Despacho</span>
+                <span class="text-sm font-bold text-white">CL 16 NORTE # 98 - 593 CS 99, Cali - Colombia</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Contact Form Box -->
+        <div class="glass-card p-8 rounded-3xl border border-white/10">
+          <h3 class="text-xl font-bold text-white mb-2">Envíanos un mensaje rápido</h3>
+          <p class="text-xs text-slate-400 mb-6">Te responderemos en el menor tiempo posible por correo o WhatsApp.</p>
+
+          <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Nombre Completo</label>
+              <input type="text" id="form-name" required placeholder="Tu nombre" class="w-full px-4 py-3 rounded-xl bg-kodigoo-dark border border-white/10 text-white text-sm focus:outline-none focus:border-kodigoo-cyan">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">WhatsApp / Teléfono</label>
+                <input type="tel" id="form-phone" required placeholder="Ej: 300 123 4567" class="w-full px-4 py-3 rounded-xl bg-kodigoo-dark border border-white/10 text-white text-sm focus:outline-none focus:border-kodigoo-cyan">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Correo Electrónico</label>
+                <input type="email" id="form-email" required placeholder="tu@correo.com" class="w-full px-4 py-3 rounded-xl bg-kodigoo-dark border border-white/10 text-white text-sm focus:outline-none focus:border-kodigoo-cyan">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1">Mensaje o Prenda de Interés</label>
+              <textarea id="form-message" rows="4" required placeholder="Cuéntanos qué prenda te interesa o cuál es tu consulta..." class="w-full px-4 py-3 rounded-xl bg-kodigoo-dark border border-white/10 text-white text-sm focus:outline-none focus:border-kodigoo-cyan resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-kodigoo-blue to-kodigoo-cyan text-white font-bold text-sm hover:shadow-neon transition flex items-center justify-center gap-2">
+              <i data-lucide="send" class="w-4 h-4"></i> Enviar Mensaje por WhatsApp
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-black border-t border-white/10 pt-16 pb-12 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+        
+        <!-- Brand Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="logo.png" alt="Kodigoo Logo" class="w-9 h-9 rounded-xl object-cover">
+            <span class="font-display font-extrabold text-xl text-white tracking-wider">KODIGOO<span class="text-kodigoo-cyan">.</span></span>
+          </div>
+          <p class="leading-relaxed text-slate-400">
+            Moda contemporánea, diseño moderno y tecnología para tu día a día en Colombia.
+          </p>
+          <div class="text-[11px] text-slate-500 space-y-1">
+            <p>Kodigoo • NIT 900380598-6</p>
+            <p>Cámara de Comercio de Cali: 780809-71</p>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div>
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Navegación</h4>
+          <ul class="space-y-2.5">
+            <li><a href="#inicio" class="hover:text-white transition">Inicio</a></li>
+            <li><a href="#moda" class="hover:text-white transition">Colección de Moda</a></li>
+            <li><a href="#tech" class="hover:text-white transition">Línea de Tecnología (Próximamente)</a></li>
+            <li><a href="#nosotros" class="hover:text-white transition">Sobre la Marca</a></li>
+            <li><a href="#contacto" class="hover:text-white transition">Canales de Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Channels -->
+        <div>
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Redes Oficiales</h4>
+          <ul class="space-y-2.5">
+            <li>
+              <a href="https://facebook.com/kodigoolat" target="_blank" rel="noopener noreferrer" class="hover:text-kodigoo-cyan transition flex items-center gap-2">
+                <i data-lucide="facebook" class="w-4 h-4"></i> Facebook (@kodigoolat)
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/kodigoolat" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition flex items-center gap-2">
+                <i data-lucide="instagram" class="w-4 h-4"></i> Instagram (@kodigoolat)
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/573042325503" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition flex items-center gap-2">
+                <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp (+57 304 232 5503)
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div>
+          <h4 class="font-bold text-white text-sm uppercase tracking-wider mb-4">Políticas & Legal</h4>
+          <ul class="space-y-2.5">
+            <li><a href="javascript:void(0)" onclick="openModal('privacy')" class="hover:text-white transition">Tratamiento de Datos (Ley 1581)</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('terms')" class="hover:text-white transition">Términos y Condiciones de Uso</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('shipping')" class="hover:text-white transition">Políticas de Envío y Cambios</a></li>
+            <li><a href="assets/docs/camara_comercio_kodigoo.pdf" target="_blank" class="hover:text-emerald-400 transition flex items-center gap-1"><i data-lucide="file-text" class="w-3.5 h-3.5"></i> Certificado Cámara de Comercio</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-slate-500">
+        <div>
+          <p>© 2026 Kodigoo (NIT: 900380598-6). Todos los derechos reservados. Cali, Colombia.</p>
+        </div>
+        <div class="flex items-center gap-2 text-slate-400">
+          <span>Diseño & Plataforma Oficial</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-kodigoo-cyan"></span>
+          <a href="https://kodigoo.lat" class="text-white hover:text-kodigoo-cyan transition font-semibold">kodigoo.lat</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a href="https://wa.me/573042325503?text=Hola%20Kodigoo!%20Deseo%20hacer%20una%20consulta%20comercial" target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp" class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-400 text-white p-3.5 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 flex items-center justify-center border-2 border-white/20">
+    <i data-lucide="message-circle" class="w-7 h-7"></i>
+  </a>
+
+  <!-- ================= LEGAL MODALS ================= -->
+  <div id="legal-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="glass-card bg-kodigoo-dark border border-white/20 rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[85vh] overflow-y-auto relative">
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+      
+      <div id="modal-content">
+        <!-- Content will be injected by JavaScript -->
+      </div>
+      
+      <div class="mt-8 pt-4 border-t border-white/10 flex justify-end">
+        <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl bg-kodigoo-surface hover:bg-kodigoo-surfaceLight text-white text-xs font-semibold">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Contact form to WhatsApp
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const phone = document.getElementById('form-phone').value;
+      const email = document.getElementById('form-email').value;
+      const message = document.getElementById('form-message').value;
+
+      const fullText = `Hola Kodigoo! Mi nombre es ${name}.\nTel/WhatsApp: ${phone}\nCorreo: ${email}\nConsulta: ${message}`;
+      const url = `https://wa.me/573042325503?text=${encodeURIComponent(fullText)}`;
+      window.open(url, '_blank');
+    }
+
+    // Modals handling
+    function openModal(type) {
+      const modal = document.getElementById('legal-modal');
+      const container = document.getElementById('modal-content');
+
+      if (type === 'privacy') {
+        container.innerHTML = `
+          <h3 class="text-xl font-bold text-white mb-4">Política de Tratamiento de Datos Personales (Habeas Data)</h3>
+          <p class="text-xs text-slate-400 mb-3">En cumplimiento de la Ley Estatutaria 1581 de 2012 y el Decreto 1377 de 2013 de la República de Colombia, <strong>Kodigoo</strong> (NIT: 900380598-6), con domicilio en CL 16 NORTE # 98 - 593 CS 99, Cali, Valle del Cauca, informa:</p>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3">Los datos personales recolectados a través de nuestro sitio web https://kodigoo.lat, canales de WhatsApp o redes sociales serán tratados de manera confidencial y segura con los siguientes fines exclusivos:</p>
+          <ul class="text-xs text-slate-300 list-disc pl-5 space-y-1 mb-4">
+            <li>Gestión, procesamiento y despacho logístico de compras y pedidos.</li>
+            <li>Emisión de facturas y soporte post-venta.</li>
+            <li>Atención a consultas, sugerencias y solicitudes de cambio o garantía.</li>
+          </ul>
+          <p class="text-xs text-slate-400">El titular de los datos puede ejercer sus derechos de conocimiento, actualización, rectificación y supresión enviando un correo a <strong>soporte@kodigoo.lat</strong>.</p>
+        `;
+      } else if (type === 'terms') {
+        container.innerHTML = `
+          <h3 class="text-xl font-bold text-white mb-4">Términos y Condiciones del Servicio</h3>
+          <p class="text-xs text-slate-400 mb-3">Bienvenido al sitio web oficial de <strong>Kodigoo</strong> (https://kodigoo.lat). Al navegar y utilizar nuestros servicios, aceptas las siguientes condiciones:</p>
+          <ul class="text-xs text-slate-300 list-disc pl-5 space-y-2 mb-4">
+            <li><strong>Propiedad Intelectual:</strong> Las marcas, logotipos, imágenes y material visual expuesto en este sitio son propiedad de Kodigoo y están protegidos por las leyes de propiedad industrial colombianas.</li>
+            <li><strong>Disponibilidad y Precios:</strong> Los precios están expresados en Pesos Colombianos (COP). Kodigoo se reserva el derecho de modificar precios y disponibilidad sin previo aviso.</li>
+            <li><strong>Canal de Venta:</strong> Las transacciones se realizan a través de canales directos verificados y pasarelas de pago autorizadas para el territorio colombiano.</li>
+          </ul>
+        `;
+      } else if (type === 'shipping') {
+        container.innerHTML = `
+          <h3 class="text-xl font-bold text-white mb-4">Políticas de Envíos, Cambios y Garantías</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3"><strong>1. Cobertura de Envíos:</strong> Despachamos a nivel nacional desde la ciudad de Cali, Valle del Cauca, a través de empresas de mensajería especializada autorizadas. Los tiempos de entrega oscilan entre 2 a 5 días hábiles según la ciudad de destino.</p>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3"><strong>2. Cambios de Prenda:</strong> Para solicitar un cambio de talla, dispones de 15 días calendario posteriores a la entrega. La prenda debe encontrarse sin uso, limpia y con sus marquillas originales.</p>
+          <p class="text-xs text-slate-300 leading-relaxed mb-3"><strong>3. Derecho de Retracto:</strong> De conformidad con el artículo 47 de la Ley 1480 de 2011 (Estatuto del Consumidor), puedes ejercer tu derecho de retracto dentro de los cinco (5) días hábiles siguientes a la entrega del producto.</p>
+          <p class="text-xs text-slate-400">Para iniciar una solicitud escribe a soporte@kodigoo.lat o a nuestro WhatsApp comercial +57 304 232 5503.</p>
+        `;
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('legal-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  </script>
+</body>
+</html>
